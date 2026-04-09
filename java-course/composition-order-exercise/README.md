@@ -19,18 +19,18 @@ Sistema de pedidos em Java que demonstra conceitos fundamentais de Orientação 
 2. Execute `Main.java`
 3. Siga os prompts do console
 
-## 📂 Estrutura
-
-src/
-├── entities/
-│ ├── Client.java
-│ ├── Order.java
-│ ├── OrderItem.java
-│ ├── OrderStatus.java
-│ └── Product.java
-└── Main.java
-
-
+## 📂 Estrutura do Projeto
+```text
+composition-order-exercise/
+├── src/
+│   ├── entities/
+│   │   ├── Client.java
+│   │   ├── Order.java
+│   │   ├── OrderItem.java
+│   │   ├── OrderStatus.java
+│   │   └── Product.java
+│   └── Main.java
+└── README.md
 
 ## 🎓 Contexto
 Estudo de fundamentos Java (Nélio Alves + DIO) focado em boas práticas e preparação para backend.
