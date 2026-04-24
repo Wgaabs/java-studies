@@ -16,13 +16,13 @@ public class RentalService {
     }
 
     public Invoice processInvoice(CarRental carRental) {
-        long hours = ChronoUnit.HOURS.between(carRental.getStart(), carRental.getFinish());
+        long roundedHours = (long) Math.ceil(ChronoUnit.MINUTES.between(carRental.getStart(), carRental.getFinish()) / 60.0);
 
         double basicPayment;
-        if (hours <= 12) {
-            basicPayment = hours * pricePerHour;
+        if (roundedHours <= 12) {
+            basicPayment = roundedHours * pricePerHour;
         } else {
-            long days = (long) Math.ceil(hours / 24.0);
+            long days = (long) Math.ceil(roundedHours / 24.0);
             basicPayment = days * pricePerDay;
         }
 
